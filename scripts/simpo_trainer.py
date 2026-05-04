@@ -3,6 +3,7 @@ import inspect
 import random
 import warnings
 from collections import defaultdict
+from contextlib import contextmanager
 from contextlib import nullcontext
 from functools import wraps
 from typing import Any, Callable, Dict, List, Literal, Optional, Tuple, Union
@@ -258,10 +259,24 @@ class SimPOTrainer(Trainer):
         self.beta = args.beta
         self.gamma_beta_ratio = args.gamma_beta_ratio
         self.sft_weight = args.sft_weight
+        self.dynamic_gamma_enabled = args.dynamic_gamma_enabled
+        self.dynamic_gamma_strategy = args.dynamic_gamma_strategy
+        self.dynamic_gamma_similarity_scale = args.dynamic_gamma_similarity_scale
+        self.dynamic_gamma_min = args.dynamic_gamma_min
+        self.dynamic_gamma_max = args.dynamic_gamma_max
         self.label_smoothing = args.label_smoothing
         self.loss_type = args.loss_type
 
+        if self.dynamic_gamma_enabled:
+            if self.dynamic_gamma_strategy != "sim_linear":
+                raise ValueError(f"Unknown dynamic gamma strategy: {self.dynamic_gamma_strategy}")
+            if self.dynamic_gamma_similarity_scale < 0:
+                raise ValueError("dynamic_gamma_similarity_scale must be non-negative.")
+            if self.dynamic_gamma_max is not None and self.dynamic_gamma_min > self.dynamic_gamma_max:
+                raise ValueError("dynamic_gamma_min must be less than or equal to dynamic_gamma_max.")
+
         self._stored_metrics = defaultdict(lambda: defaultdict(list))
+        self._captured_lm_head_hidden_states = None
 
         # Compute that only on the main process for faster data processing.
         # see: https://github.com/huggingface/trl/pull/1255
@@ -561,12 +576,14 @@ class SimPOTrainer(Trainer):
         self,
         policy_chosen_logps: torch.FloatTensor,
         policy_rejected_logps: torch.FloatTensor,
+        gamma_beta_ratio: Optional[torch.FloatTensor] = None,
     ) -> Tuple[torch.FloatTensor, torch.FloatTensor, torch.FloatTensor]:
         """Compute the SimPO loss for a batch of policy model log probabilities.
 
         Args:
             policy_chosen_logps: Log probabilities of the policy model for the chosen responses. Shape: (batch_size,)
             policy_rejected_logps: Log probabilities of the policy model for the rejected responses. Shape: (batch_size,)
+            gamma_beta_ratio: Optional per-sample target reward margin divided by beta. Shape: (batch_size,)
 
         Returns:
             A tuple of three tensors: (losses, chosen_rewards, rejected_rewards).
@@ -575,7 +592,11 @@ class SimPOTrainer(Trainer):
         """
         pi_logratios = policy_chosen_logps - policy_rejected_logps
         pi_logratios = pi_logratios.to(self.accelerator.device)
-        logits = pi_logratios - self.gamma_beta_ratio
+        if gamma_beta_ratio is None:
+            gamma_beta_ratio = self.gamma_beta_ratio
+        else:
+            gamma_beta_ratio = gamma_beta_ratio.to(self.accelerator.device)
+        logits = pi_logratios - gamma_beta_ratio
 
         if self.loss_type == "sigmoid":
             losses = (
@@ -593,6 +614,54 @@ class SimPOTrainer(Trainer):
         rejected_rewards = self.beta * policy_rejected_logps.to(self.accelerator.device).detach()
 
         return losses, chosen_rewards, rejected_rewards
+
+    @contextmanager
+    def _capture_lm_head_hidden_states(self, model: nn.Module):
+        output_embeddings = model.get_output_embeddings() if hasattr(model, "get_output_embeddings") else None
+        if output_embeddings is None:
+            raise ValueError("Dynamic gamma requires a model with output embeddings to capture hidden states.")
+
+        self._captured_lm_head_hidden_states = None
+
+        def capture_hook(module, inputs):
+            if inputs:
+                self._captured_lm_head_hidden_states = inputs[0].detach()
+
+        handle = output_embeddings.register_forward_pre_hook(capture_hook)
+        try:
+            yield
+        finally:
+            handle.remove()
+
+    def _response_embedding_similarity(
+        self,
+        hidden_states: torch.FloatTensor,
+        labels: torch.LongTensor,
+        len_chosen: int,
+    ) -> torch.FloatTensor:
+        response_mask = labels != self.label_pad_token_id
+        mask = response_mask.to(dtype=hidden_states.dtype, device=hidden_states.device).unsqueeze(-1)
+        denom = mask.sum(dim=1).clamp(min=1.0)
+        response_embeddings = (hidden_states * mask).sum(dim=1) / denom
+        chosen_embeddings = response_embeddings[:len_chosen]
+        rejected_embeddings = response_embeddings[len_chosen:]
+        return F.cosine_similarity(chosen_embeddings.float(), rejected_embeddings.float(), dim=-1)
+
+    def _compute_dynamic_gamma_beta_ratio(
+        self,
+        hidden_states: torch.FloatTensor,
+        labels: torch.LongTensor,
+        len_chosen: int,
+    ) -> Tuple[torch.FloatTensor, torch.FloatTensor]:
+        similarity = self._response_embedding_similarity(hidden_states, labels, len_chosen)
+        similarity_01 = ((similarity + 1.0) / 2.0).clamp(0.0, 1.0)
+        base_gamma = torch.full_like(similarity_01, float(self.gamma_beta_ratio))
+        gamma_beta_ratio = base_gamma * (1.0 - self.dynamic_gamma_similarity_scale * similarity_01)
+        if self.dynamic_gamma_max is None:
+            gamma_beta_ratio = gamma_beta_ratio.clamp(min=self.dynamic_gamma_min)
+        else:
+            gamma_beta_ratio = gamma_beta_ratio.clamp(min=self.dynamic_gamma_min, max=self.dynamic_gamma_max)
+        return gamma_beta_ratio, similarity
 
     def concatenated_forward(
         self, model: nn.Module, batch: Dict[str, Union[List, torch.LongTensor]]
@@ -619,12 +688,14 @@ class SimPOTrainer(Trainer):
             else {}
         )
 
-        all_logits = model(
-            concatenated_batch["concatenated_input_ids"],
-            attention_mask=concatenated_batch["concatenated_attention_mask"],
-            use_cache=False,
-            **model_kwargs,
-        ).logits
+        capture_context = self._capture_lm_head_hidden_states(model) if self.dynamic_gamma_enabled else nullcontext()
+        with capture_context:
+            all_logits = model(
+                concatenated_batch["concatenated_input_ids"],
+                attention_mask=concatenated_batch["concatenated_attention_mask"],
+                use_cache=False,
+                **model_kwargs,
+            ).logits
 
         all_logps = self.get_batch_logps(
             all_logits,
@@ -641,8 +712,26 @@ class SimPOTrainer(Trainer):
         rejected_logits = all_logits[len_chosen:]
 
         chosen_labels = concatenated_batch["concatenated_labels"][:len_chosen]
+        dynamic_gamma_beta_ratio = None
+        dynamic_similarity = None
+        if self.dynamic_gamma_enabled:
+            if self._captured_lm_head_hidden_states is None:
+                raise ValueError("Dynamic gamma could not capture hidden states from the model output head.")
+            dynamic_gamma_beta_ratio, dynamic_similarity = self._compute_dynamic_gamma_beta_ratio(
+                self._captured_lm_head_hidden_states,
+                concatenated_batch["concatenated_labels"],
+                len_chosen,
+            )
 
-        return (chosen_logps, rejected_logps, chosen_logits, rejected_logits, chosen_labels)
+        return (
+            chosen_logps,
+            rejected_logps,
+            chosen_logits,
+            rejected_logits,
+            chosen_labels,
+            dynamic_gamma_beta_ratio,
+            dynamic_similarity,
+        )
 
     @staticmethod
     def get_batch_logps(
@@ -698,11 +787,14 @@ class SimPOTrainer(Trainer):
             policy_chosen_logits,
             policy_rejected_logits,
             chosen_labels,
+            dynamic_gamma_beta_ratio,
+            dynamic_similarity,
         ) = self.concatenated_forward(model, batch)
 
         losses, chosen_rewards, rejected_rewards = self.simpo_loss(
             policy_chosen_logps,
             policy_rejected_logps,
+            gamma_beta_ratio=dynamic_gamma_beta_ratio,
         )
 
         loss = losses.mean()
@@ -726,6 +818,14 @@ class SimPOTrainer(Trainer):
         metrics[f"{prefix}logps/chosen"] = policy_chosen_logps.detach().mean().cpu()
         metrics[f"{prefix}logits/rejected"] = policy_rejected_logits.detach().mean().cpu()
         metrics[f"{prefix}logits/chosen"] = policy_chosen_logits.detach().mean().cpu()
+        if dynamic_gamma_beta_ratio is not None:
+            metrics[f"{prefix}gamma_beta_ratio/mean"] = dynamic_gamma_beta_ratio.detach().mean().cpu()
+            metrics[f"{prefix}gamma_beta_ratio/min"] = dynamic_gamma_beta_ratio.detach().min().cpu()
+            metrics[f"{prefix}gamma_beta_ratio/max"] = dynamic_gamma_beta_ratio.detach().max().cpu()
+        if dynamic_similarity is not None:
+            metrics[f"{prefix}similarity/mean"] = dynamic_similarity.detach().mean().cpu()
+            metrics[f"{prefix}similarity/min"] = dynamic_similarity.detach().min().cpu()
+            metrics[f"{prefix}similarity/max"] = dynamic_similarity.detach().max().cpu()
 
         return loss, metrics
 

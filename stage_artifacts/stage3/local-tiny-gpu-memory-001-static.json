@@ -1,0 +1,53 @@
+{
+  "cuda_device_name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+  "dynamic_gamma_enabled": false,
+  "global_step": 3,
+  "grad_norm_max": 12.718899726867676,
+  "grad_norm_values": [
+    12.718899726867676,
+    9.628512382507324,
+    11.837987899780273
+  ],
+  "last_step": {
+    "epoch": 1.0,
+    "grad_norm": 11.837987899780273,
+    "learning_rate": 0.0,
+    "logits/chosen": 0.00686576496809721,
+    "logits/rejected": 0.004937661346048117,
+    "logps/chosen": -3.1375255584716797,
+    "logps/rejected": -3.1741206645965576,
+    "loss": 1.2603,
+    "rewards/accuracies": 1.0,
+    "rewards/chosen": -6.275051116943359,
+    "rewards/margins": 0.07319021224975586,
+    "rewards/rejected": -6.348241329193115,
+    "step": 3
+  },
+  "loss_max": 1.4129,
+  "loss_min": 1.2603,
+  "loss_values": [
+    1.4129,
+    1.2753,
+    1.2603
+  ],
+  "memory_after": {
+    "allocated_mb": 16.5986328125,
+    "free_mb": 14968.0,
+    "max_allocated_mb": 17.7861328125,
+    "max_reserved_mb": 22.0,
+    "reserved_mb": 22.0,
+    "total_mb": 16375.5
+  },
+  "memory_before": {
+    "allocated_mb": 0.0,
+    "free_mb": 15044.0,
+    "max_allocated_mb": 0.0,
+    "max_reserved_mb": 0.0,
+    "reserved_mb": 0.0,
+    "total_mb": 16375.5
+  },
+  "runtime_s": 0.6667491660000451,
+  "status": "PASS",
+  "train_loss": 1.3161539634068806,
+  "variant": "static"
+}

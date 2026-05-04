@@ -25,6 +25,16 @@ class SimPOConfig(TrainingArguments):
             The ratio between the target reward margin (gamma) and beta in SimPO loss.
         sft_weight (`float`, defaults to 0.0):
             SFT loss weight added to the SimPO loss (0.0 is not using SFT).
+        dynamic_gamma_enabled (`bool`, defaults to `False`):
+            Whether to replace the static gamma/beta ratio with a per-sample dynamic value.
+        dynamic_gamma_strategy (`str`, defaults to `sim_linear`):
+            The dynamic gamma strategy. Currently supports `sim_linear`.
+        dynamic_gamma_similarity_scale (`float`, defaults to `0.5`):
+            How strongly normalized chosen/rejected similarity lowers the base gamma/beta ratio.
+        dynamic_gamma_min (`float`, defaults to `0.0`):
+            Minimum effective gamma/beta ratio after dynamic adjustment.
+        dynamic_gamma_max (`Optional[float]`, defaults to `None`):
+            Maximum effective gamma/beta ratio after dynamic adjustment. If unset, no upper clamp is applied.
         label_smoothing (`float`, defaults to 0):
             The label smoothing factor. This argument is required if you want to use the default data collator.
         loss_type (`str`, defaults to `sigmoid`):
@@ -55,6 +65,11 @@ class SimPOConfig(TrainingArguments):
     beta: float = 2.0
     gamma_beta_ratio: float = 0.25
     sft_weight: float = 0.0
+    dynamic_gamma_enabled: bool = False
+    dynamic_gamma_strategy: Literal["sim_linear"] = "sim_linear"
+    dynamic_gamma_similarity_scale: float = 0.5
+    dynamic_gamma_min: float = 0.0
+    dynamic_gamma_max: Optional[float] = None
     label_smoothing: float = 0
     loss_type: Literal["sigmoid", "hinge"] = "sigmoid"
     disable_dropout: bool = True
@@ -68,4 +83,3 @@ class SimPOConfig(TrainingArguments):
     model_init_kwargs: Optional[Dict] = None
 
     dataset_num_proc: Optional[int] = None
-

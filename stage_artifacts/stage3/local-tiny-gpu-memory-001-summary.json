@@ -1,0 +1,138 @@
+{
+  "dynamic": {
+    "cuda_device_name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "dynamic_gamma_enabled": true,
+    "gamma_max": 0.2836344242095947,
+    "gamma_mean_values": [
+      0.27681225538253784,
+      0.27203166484832764,
+      0.2836344242095947
+    ],
+    "gamma_min": 0.27203166484832764,
+    "global_step": 3,
+    "grad_norm_max": 11.186634063720703,
+    "grad_norm_values": [
+      11.186634063720703,
+      8.29071044921875,
+      10.26228141784668
+    ],
+    "last_step": {
+      "epoch": 1.0,
+      "gamma_beta_ratio/max": 0.2836344242095947,
+      "gamma_beta_ratio/mean": 0.2836344242095947,
+      "gamma_beta_ratio/min": 0.2836344242095947,
+      "grad_norm": 10.26228141784668,
+      "learning_rate": 0.0,
+      "logits/chosen": 0.00686576496809721,
+      "logits/rejected": 0.004937662743031979,
+      "logps/chosen": -3.1375255584716797,
+      "logps/rejected": -3.1741206645965576,
+      "loss": 0.9704,
+      "rewards/accuracies": 1.0,
+      "rewards/chosen": -6.275051116943359,
+      "rewards/margins": 0.07319021224975586,
+      "rewards/rejected": -6.348241329193115,
+      "similarity/max": 0.7309247255325317,
+      "similarity/mean": 0.7309247255325317,
+      "similarity/min": 0.7309247255325317,
+      "step": 3
+    },
+    "loss_max": 1.0948,
+    "loss_min": 0.969,
+    "loss_values": [
+      1.0948,
+      0.969,
+      0.9704
+    ],
+    "memory_after": {
+      "allocated_mb": 16.6015625,
+      "free_mb": 14968.0,
+      "max_allocated_mb": 17.7861328125,
+      "max_reserved_mb": 22.0,
+      "reserved_mb": 22.0,
+      "total_mb": 16375.5
+    },
+    "memory_before": {
+      "allocated_mb": 0.0,
+      "free_mb": 15044.0,
+      "max_allocated_mb": 0.0,
+      "max_reserved_mb": 0.0,
+      "reserved_mb": 0.0,
+      "total_mb": 16375.5
+    },
+    "runtime_s": 0.4821848390001833,
+    "similarity_max": 0.8237468004226685,
+    "similarity_mean_values": [
+      0.7855019569396973,
+      0.8237468004226685,
+      0.7309247255325317
+    ],
+    "similarity_min": 0.7309247255325317,
+    "status": "PASS",
+    "train_loss": 1.0114065806070964,
+    "variant": "dynamic"
+  },
+  "experiment_id": "local-tiny-gpu-memory-001",
+  "memory_delta_max_reserved_mb_dynamic_minus_static": 0.0,
+  "memory_guard_max_reserved_mb": 1024.0,
+  "notes": [
+    "Each variant ran in a separate Python subprocess for isolated CUDA peak stats.",
+    "No model download, dataset download, or 8B/9B model was used.",
+    "Tiny GPU memory results do not prove 8B/9B memory overhead."
+  ],
+  "scope": "gpu_tiny_synthetic",
+  "static": {
+    "cuda_device_name": "NVIDIA GeForce RTX 4090 Laptop GPU",
+    "dynamic_gamma_enabled": false,
+    "global_step": 3,
+    "grad_norm_max": 12.718899726867676,
+    "grad_norm_values": [
+      12.718899726867676,
+      9.628512382507324,
+      11.837987899780273
+    ],
+    "last_step": {
+      "epoch": 1.0,
+      "grad_norm": 11.837987899780273,
+      "learning_rate": 0.0,
+      "logits/chosen": 0.00686576496809721,
+      "logits/rejected": 0.004937661346048117,
+      "logps/chosen": -3.1375255584716797,
+      "logps/rejected": -3.1741206645965576,
+      "loss": 1.2603,
+      "rewards/accuracies": 1.0,
+      "rewards/chosen": -6.275051116943359,
+      "rewards/margins": 0.07319021224975586,
+      "rewards/rejected": -6.348241329193115,
+      "step": 3
+    },
+    "loss_max": 1.4129,
+    "loss_min": 1.2603,
+    "loss_values": [
+      1.4129,
+      1.2753,
+      1.2603
+    ],
+    "memory_after": {
+      "allocated_mb": 16.5986328125,
+      "free_mb": 14968.0,
+      "max_allocated_mb": 17.7861328125,
+      "max_reserved_mb": 22.0,
+      "reserved_mb": 22.0,
+      "total_mb": 16375.5
+    },
+    "memory_before": {
+      "allocated_mb": 0.0,
+      "free_mb": 15044.0,
+      "max_allocated_mb": 0.0,
+      "max_reserved_mb": 0.0,
+      "reserved_mb": 0.0,
+      "total_mb": 16375.5
+    },
+    "runtime_s": 0.6667491660000451,
+    "status": "PASS",
+    "train_loss": 1.3161539634068806,
+    "variant": "static"
+  },
+  "status": "PASS"
+}

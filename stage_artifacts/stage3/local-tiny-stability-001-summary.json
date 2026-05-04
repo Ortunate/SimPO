@@ -1,0 +1,127 @@
+{
+  "dynamic": {
+    "dynamic_gamma_enabled": true,
+    "gamma_max": 0.2925293445587158,
+    "gamma_mean_values": [
+      0.2925293445587158,
+      0.2863449454307556,
+      0.2776424288749695,
+      0.27108025550842285,
+      0.28287655115127563,
+      0.2605389952659607
+    ],
+    "gamma_min": 0.2605389952659607,
+    "global_step": 6,
+    "grad_norm_max": 10.559185028076172,
+    "grad_norm_values": [
+      10.559185028076172,
+      9.552311897277832,
+      7.417342662811279,
+      6.497774600982666,
+      7.091568946838379,
+      6.002791881561279
+    ],
+    "last_step": {
+      "epoch": 1.0,
+      "gamma_beta_ratio/max": 0.2605389952659607,
+      "gamma_beta_ratio/mean": 0.2605389952659607,
+      "gamma_beta_ratio/min": 0.2605389952659607,
+      "grad_norm": 6.002791881561279,
+      "learning_rate": 0.0,
+      "logits/chosen": 0.006485030986368656,
+      "logits/rejected": 0.0072450190782547,
+      "logps/chosen": -3.6308181285858154,
+      "logps/rejected": -3.5840904712677,
+      "loss": 1.0469,
+      "rewards/accuracies": 0.0,
+      "rewards/chosen": -7.261636257171631,
+      "rewards/margins": -0.09345531463623047,
+      "rewards/rejected": -7.1681809425354,
+      "similarity/max": 0.9156879186630249,
+      "similarity/mean": 0.9156879186630249,
+      "similarity/min": 0.9156879186630249,
+      "step": 6
+    },
+    "loss_first": 1.1289,
+    "loss_last": 1.0469,
+    "loss_max": 1.1842,
+    "loss_min": 0.9331,
+    "loss_values": [
+      1.1289,
+      1.1842,
+      0.9814,
+      1.045,
+      0.9331,
+      1.0469
+    ],
+    "max_rss_mb": 608.41796875,
+    "runtime_s": 0.12312405100010437,
+    "similarity_max": 0.9156879186630249,
+    "similarity_mean_values": [
+      0.659765362739563,
+      0.7092403769493103,
+      0.7788605093955994,
+      0.8313578367233276,
+      0.7369875907897949,
+      0.9156879186630249
+    ],
+    "similarity_min": 0.659765362739563,
+    "status": "PASS",
+    "train_loss": 1.0532668928305309,
+    "variant": "dynamic"
+  },
+  "experiment_id": "local-tiny-stability-001",
+  "memory_delta_mb_dynamic_minus_static": -0.51171875,
+  "notes": [
+    "Each variant ran in a separate Python subprocess for isolated max RSS.",
+    "No GPU, model download, dataset download, or 8B/9B model was used.",
+    "CPU RSS is not a substitute for real GPU VRAM measurement."
+  ],
+  "scope": "cpu_tiny_synthetic",
+  "static": {
+    "dynamic_gamma_enabled": false,
+    "global_step": 6,
+    "grad_norm_max": 11.861966133117676,
+    "grad_norm_values": [
+      11.861966133117676,
+      10.689738273620605,
+      8.570420265197754,
+      7.46175479888916,
+      8.232115745544434,
+      6.928290367126465
+    ],
+    "last_step": {
+      "epoch": 1.0,
+      "grad_norm": 6.928290367126465,
+      "learning_rate": 0.0,
+      "logits/chosen": 0.0064850300550460815,
+      "logits/rejected": 0.0072450190782547,
+      "logps/chosen": -3.6308181285858154,
+      "logps/rejected": -3.5840904712677,
+      "loss": 1.3824,
+      "rewards/accuracies": 0.0,
+      "rewards/chosen": -7.261636257171631,
+      "rewards/margins": -0.09345531463623047,
+      "rewards/rejected": -7.1681809425354,
+      "step": 6
+    },
+    "loss_first": 1.4275,
+    "loss_last": 1.3824,
+    "loss_max": 1.499,
+    "loss_min": 1.2182,
+    "loss_values": [
+      1.4275,
+      1.499,
+      1.2816,
+      1.3645,
+      1.2182,
+      1.3824
+    ],
+    "max_rss_mb": 608.9296875,
+    "runtime_s": 0.18678673199974583,
+    "status": "PASS",
+    "train_loss": 1.36223038037618,
+    "variant": "static"
+  },
+  "status": "PASS"
+}

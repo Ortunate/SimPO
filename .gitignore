@@ -122,6 +122,10 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.venv/
+.uv-python/
+.codex
+.codex/
 env/
 venv/
 ENV/
@@ -162,3 +166,18 @@ cython_debug/
 # Temp folders
 data/
 wandb/
+
+# Local experiment artifacts and generated training outputs
+stage_artifacts/**/model.safetensors
+stage_artifacts/**/training_args.bin
+stage_artifacts/**/hf-cache/
+stage_artifacts/**/*-output/
+stage_artifacts/**/local_tiny_gpt2/
+stage_artifacts/**/__pycache__/
+stage_artifacts/**/*.arrow
+checkpoints/
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.safetensors

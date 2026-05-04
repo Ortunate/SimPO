@@ -1,0 +1,43 @@
+{
+  "stage": 4,
+  "created_date": "2026-05-04",
+  "package_status": "prepared_not_executed",
+  "entrypoint": "scripts/run_simpo.py",
+  "primary_model": "google/gemma-2-9b-it",
+  "primary_dataset": "princeton-nlp/gemma2-ultrafeedback-armorm",
+  "accelerate_config": "stage_artifacts/stage4/cloud_run_package/accelerate/deepspeed_zero3_4gpu.yaml",
+  "runs": [
+    {
+      "run_id": "stage4-gemma-2-9b-it-simpo-static",
+      "type": "baseline",
+      "strategy": "static",
+      "config": "stage_artifacts/stage4/cloud_run_package/configs/gemma-2-9b-it-simpo-static.yaml",
+      "approval_required_before_execution": true
+    },
+    {
+      "run_id": "stage4-gemma-2-9b-it-simpo-dynamic-sim-linear",
+      "type": "dynamic",
+      "strategy": "sim_linear",
+      "config": "stage_artifacts/stage4/cloud_run_package/configs/gemma-2-9b-it-simpo-dynamic-sim-linear.yaml",
+      "approval_required_before_execution": true
+    }
+  ],
+  "local_execution_allowed": false,
+  "requires_human_decisions": [
+    "cloud provider or server target",
+    "GPU count and GPU type",
+    "budget or wall-clock limit",
+    "Hugging Face access and cache strategy",
+    "W&B project/entity or offline logging choice",
+    "checkpoint retention policy",
+    "approval to download model and dataset",
+    "approval to start 9B training"
+  ],
+  "stage_gate_status": {
+    "baseline_training_path_smoke": "pass_local_tiny",
+    "dynamic_gamma_path_smoke": "pass_local_tiny",
+    "dynamic_strategy_small_validation": "pass_cpu_and_tiny_gpu",
+    "memory_overhead": "pass_tiny_gpu_only_8b_9b_unknown",
+    "reproducible_configs_logs": "prepared_for_review"
+  }
+}

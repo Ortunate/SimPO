@@ -1,0 +1,45 @@
+{
+  "dynamic_gamma_enabled": false,
+  "global_step": 6,
+  "grad_norm_max": 11.861966133117676,
+  "grad_norm_values": [
+    11.861966133117676,
+    10.689738273620605,
+    8.570420265197754,
+    7.46175479888916,
+    8.232115745544434,
+    6.928290367126465
+  ],
+  "last_step": {
+    "epoch": 1.0,
+    "grad_norm": 6.928290367126465,
+    "learning_rate": 0.0,
+    "logits/chosen": 0.0064850300550460815,
+    "logits/rejected": 0.0072450190782547,
+    "logps/chosen": -3.6308181285858154,
+    "logps/rejected": -3.5840904712677,
+    "loss": 1.3824,
+    "rewards/accuracies": 0.0,
+    "rewards/chosen": -7.261636257171631,
+    "rewards/margins": -0.09345531463623047,
+    "rewards/rejected": -7.1681809425354,
+    "step": 6
+  },
+  "loss_first": 1.4275,
+  "loss_last": 1.3824,
+  "loss_max": 1.499,
+  "loss_min": 1.2182,
+  "loss_values": [
+    1.4275,
+    1.499,
+    1.2816,
+    1.3645,
+    1.2182,
+    1.3824
+  ],
+  "max_rss_mb": 608.9296875,
+  "runtime_s": 0.18678673199974583,
+  "status": "PASS",
+  "train_loss": 1.36223038037618,
+  "variant": "static"
+}
