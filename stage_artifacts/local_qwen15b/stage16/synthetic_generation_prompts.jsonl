@@ -1,0 +1,2 @@
+{"prompt_id":"synthetic-gen-001","instruction":"Give two practical checks before launching a local GPU QLoRA smoke run."}
+{"prompt_id":"synthetic-gen-002","instruction":"State why a local Qwen2.5-1.5B QLoRA smoke run cannot prove 8B full fine-tuning behavior."}

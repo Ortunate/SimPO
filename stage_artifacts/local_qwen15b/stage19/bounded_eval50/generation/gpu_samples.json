@@ -1,0 +1,602 @@
+[
+  {
+    "after_generate_mib": 5372,
+    "before_generate_mib": 4962,
+    "prompt_id": "uf-test-001",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5357,
+    "before_generate_mib": 5370,
+    "prompt_id": "uf-test-002",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5719,
+    "before_generate_mib": 5355,
+    "prompt_id": "uf-test-003",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5719,
+    "before_generate_mib": 5719,
+    "prompt_id": "uf-test-004",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5721,
+    "before_generate_mib": 5719,
+    "prompt_id": "uf-test-005",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5720,
+    "before_generate_mib": 5721,
+    "prompt_id": "uf-test-006",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5720,
+    "before_generate_mib": 5720,
+    "prompt_id": "uf-test-007",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5720,
+    "before_generate_mib": 5720,
+    "prompt_id": "uf-test-008",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5741,
+    "before_generate_mib": 5720,
+    "prompt_id": "uf-test-009",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5721,
+    "before_generate_mib": 5721,
+    "prompt_id": "uf-test-010",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5552,
+    "before_generate_mib": 5721,
+    "prompt_id": "uf-test-011",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6069,
+    "before_generate_mib": 5552,
+    "prompt_id": "uf-test-012",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6278,
+    "before_generate_mib": 6069,
+    "prompt_id": "uf-test-013",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6204,
+    "before_generate_mib": 6278,
+    "prompt_id": "uf-test-014",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6203,
+    "before_generate_mib": 6204,
+    "prompt_id": "uf-test-015",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6203,
+    "before_generate_mib": 6203,
+    "prompt_id": "uf-test-016",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6203,
+    "before_generate_mib": 6203,
+    "prompt_id": "uf-test-017",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6203,
+    "before_generate_mib": 6203,
+    "prompt_id": "uf-test-018",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5751,
+    "before_generate_mib": 6203,
+    "prompt_id": "uf-test-019",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5752,
+    "before_generate_mib": 5751,
+    "prompt_id": "uf-test-020",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5752,
+    "before_generate_mib": 5752,
+    "prompt_id": "uf-test-021",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5752,
+    "before_generate_mib": 5752,
+    "prompt_id": "uf-test-022",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5867,
+    "before_generate_mib": 5752,
+    "prompt_id": "uf-test-023",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6204,
+    "before_generate_mib": 5782,
+    "prompt_id": "uf-test-024",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6205,
+    "before_generate_mib": 6204,
+    "prompt_id": "uf-test-025",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6205,
+    "before_generate_mib": 6205,
+    "prompt_id": "uf-test-026",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6206,
+    "before_generate_mib": 6205,
+    "prompt_id": "uf-test-027",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5683,
+    "before_generate_mib": 6206,
+    "prompt_id": "uf-test-028",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5961,
+    "before_generate_mib": 5683,
+    "prompt_id": "uf-test-029",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5998,
+    "before_generate_mib": 5961,
+    "prompt_id": "uf-test-030",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6018,
+    "before_generate_mib": 5998,
+    "prompt_id": "uf-test-031",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6134,
+    "before_generate_mib": 6018,
+    "prompt_id": "uf-test-032",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6126,
+    "before_generate_mib": 6134,
+    "prompt_id": "uf-test-033",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6126,
+    "before_generate_mib": 6126,
+    "prompt_id": "uf-test-034",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6127,
+    "before_generate_mib": 6126,
+    "prompt_id": "uf-test-035",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6143,
+    "before_generate_mib": 6127,
+    "prompt_id": "uf-test-036",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5964,
+    "before_generate_mib": 6143,
+    "prompt_id": "uf-test-037",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6124,
+    "before_generate_mib": 5964,
+    "prompt_id": "uf-test-038",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6130,
+    "before_generate_mib": 6124,
+    "prompt_id": "uf-test-039",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6128,
+    "before_generate_mib": 6130,
+    "prompt_id": "uf-test-040",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6128,
+    "before_generate_mib": 6128,
+    "prompt_id": "uf-test-041",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6129,
+    "before_generate_mib": 6128,
+    "prompt_id": "uf-test-042",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6129,
+    "before_generate_mib": 6129,
+    "prompt_id": "uf-test-043",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5662,
+    "before_generate_mib": 6129,
+    "prompt_id": "uf-test-044",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5895,
+    "before_generate_mib": 5662,
+    "prompt_id": "uf-test-045",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6106,
+    "before_generate_mib": 5895,
+    "prompt_id": "uf-test-046",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6105,
+    "before_generate_mib": 6106,
+    "prompt_id": "uf-test-047",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6105,
+    "before_generate_mib": 6105,
+    "prompt_id": "uf-test-048",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6105,
+    "before_generate_mib": 6105,
+    "prompt_id": "uf-test-049",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6105,
+    "before_generate_mib": 6105,
+    "prompt_id": "uf-test-050",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5177,
+    "before_generate_mib": 5078,
+    "prompt_id": "uf-test-001",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5177,
+    "before_generate_mib": 5177,
+    "prompt_id": "uf-test-002",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5507,
+    "before_generate_mib": 5177,
+    "prompt_id": "uf-test-003",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5507,
+    "before_generate_mib": 5507,
+    "prompt_id": "uf-test-004",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5254,
+    "before_generate_mib": 5507,
+    "prompt_id": "uf-test-005",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5623,
+    "before_generate_mib": 5259,
+    "prompt_id": "uf-test-006",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5623,
+    "before_generate_mib": 5623,
+    "prompt_id": "uf-test-007",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5624,
+    "before_generate_mib": 5623,
+    "prompt_id": "uf-test-008",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5625,
+    "before_generate_mib": 5624,
+    "prompt_id": "uf-test-009",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5625,
+    "before_generate_mib": 5625,
+    "prompt_id": "uf-test-010",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5640,
+    "before_generate_mib": 5625,
+    "prompt_id": "uf-test-011",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6123,
+    "before_generate_mib": 5640,
+    "prompt_id": "uf-test-012",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5675,
+    "before_generate_mib": 6123,
+    "prompt_id": "uf-test-013",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5954,
+    "before_generate_mib": 5680,
+    "prompt_id": "uf-test-014",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5921,
+    "before_generate_mib": 5934,
+    "prompt_id": "uf-test-015",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5938,
+    "before_generate_mib": 5917,
+    "prompt_id": "uf-test-016",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5955,
+    "before_generate_mib": 5943,
+    "prompt_id": "uf-test-017",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5959,
+    "before_generate_mib": 5955,
+    "prompt_id": "uf-test-018",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5986,
+    "before_generate_mib": 5959,
+    "prompt_id": "uf-test-019",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5986,
+    "before_generate_mib": 5986,
+    "prompt_id": "uf-test-020",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5986,
+    "before_generate_mib": 5986,
+    "prompt_id": "uf-test-021",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5986,
+    "before_generate_mib": 5986,
+    "prompt_id": "uf-test-022",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5993,
+    "before_generate_mib": 5986,
+    "prompt_id": "uf-test-023",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5993,
+    "before_generate_mib": 5993,
+    "prompt_id": "uf-test-024",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5993,
+    "before_generate_mib": 5993,
+    "prompt_id": "uf-test-025",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6059,
+    "before_generate_mib": 5993,
+    "prompt_id": "uf-test-026",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6052,
+    "before_generate_mib": 6059,
+    "prompt_id": "uf-test-027",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6065,
+    "before_generate_mib": 6052,
+    "prompt_id": "uf-test-028",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6065,
+    "before_generate_mib": 6065,
+    "prompt_id": "uf-test-029",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6050,
+    "before_generate_mib": 6065,
+    "prompt_id": "uf-test-030",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6000,
+    "before_generate_mib": 6050,
+    "prompt_id": "uf-test-031",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5852,
+    "before_generate_mib": 6000,
+    "prompt_id": "uf-test-032",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5993,
+    "before_generate_mib": 5852,
+    "prompt_id": "uf-test-033",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6208,
+    "before_generate_mib": 5993,
+    "prompt_id": "uf-test-034",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6226,
+    "before_generate_mib": 6208,
+    "prompt_id": "uf-test-035",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6184,
+    "before_generate_mib": 6226,
+    "prompt_id": "uf-test-036",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6272,
+    "before_generate_mib": 6184,
+    "prompt_id": "uf-test-037",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5972,
+    "before_generate_mib": 6272,
+    "prompt_id": "uf-test-038",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6349,
+    "before_generate_mib": 5972,
+    "prompt_id": "uf-test-039",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6350,
+    "before_generate_mib": 6349,
+    "prompt_id": "uf-test-040",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6351,
+    "before_generate_mib": 6350,
+    "prompt_id": "uf-test-041",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6352,
+    "before_generate_mib": 6351,
+    "prompt_id": "uf-test-042",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6358,
+    "before_generate_mib": 6352,
+    "prompt_id": "uf-test-043",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 5871,
+    "before_generate_mib": 6358,
+    "prompt_id": "uf-test-044",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6138,
+    "before_generate_mib": 5871,
+    "prompt_id": "uf-test-045",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6402,
+    "before_generate_mib": 6138,
+    "prompt_id": "uf-test-046",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6389,
+    "before_generate_mib": 6402,
+    "prompt_id": "uf-test-047",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6389,
+    "before_generate_mib": 6389,
+    "prompt_id": "uf-test-048",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6389,
+    "before_generate_mib": 6389,
+    "prompt_id": "uf-test-049",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 6391,
+    "before_generate_mib": 6389,
+    "prompt_id": "uf-test-050",
+    "variant": "dynamic_64_16_20step"
+  }
+]

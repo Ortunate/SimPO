@@ -1,0 +1,974 @@
+{
+  "ab_ba_consistency_rate": 0.76,
+  "consistent_pairs": 38,
+  "dynamic_win_rate_all_consistent": 0.0263,
+  "dynamic_win_rate_non_tie": 0.3333,
+  "http_failures": 0,
+  "inconsistent_pairs": 12,
+  "pair_count": 50,
+  "pair_summaries": [
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-001",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-002",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-003",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-004",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-005",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-006",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-007",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "static",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "static",
+        "static"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-008",
+      "parse_failures": 0,
+      "winners": [
+        "static_64_16_20step",
+        "static_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-009",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-010",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "dynamic",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-011",
+      "parse_failures": 0,
+      "winners": [
+        "dynamic_64_16_20step",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-012",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "dynamic",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-013",
+      "parse_failures": 0,
+      "winners": [
+        "dynamic_64_16_20step",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-014",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "static"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-015",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "static_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-016",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-017",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-018",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "dynamic",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-019",
+      "parse_failures": 0,
+      "winners": [
+        "dynamic_64_16_20step",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-020",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-021",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-022",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-023",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "static"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-024",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "static_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-025",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-026",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-027",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-028",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-029",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-030",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-031",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-032",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "dynamic",
+        "static"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-033",
+      "parse_failures": 0,
+      "winners": [
+        "dynamic_64_16_20step",
+        "static_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "static",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-034",
+      "parse_failures": 0,
+      "winners": [
+        "static_64_16_20step",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "static",
+        "dynamic"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-035",
+      "parse_failures": 0,
+      "winners": [
+        "static_64_16_20step",
+        "dynamic_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "static"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-036",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "static_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-037",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-038",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "dynamic",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-039",
+      "parse_failures": 0,
+      "winners": [
+        "dynamic_64_16_20step",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-040",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-041",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-042",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-043",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "dynamic",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "dynamic",
+        "dynamic"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-044",
+      "parse_failures": 0,
+      "winners": [
+        "dynamic_64_16_20step",
+        "dynamic_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "static",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-045",
+      "parse_failures": 0,
+      "winners": [
+        "static_64_16_20step",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-046",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "inconsistent",
+      "consistent": false,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "dynamic"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-047",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "dynamic_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-048",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "static",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "static",
+        "static"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-049",
+      "parse_failures": 0,
+      "winners": [
+        "static_64_16_20step",
+        "static_64_16_20step"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "http_failures": 0,
+      "normalized_winners": [
+        "tie",
+        "tie"
+      ],
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l19-uf-test-050",
+      "parse_failures": 0,
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    }
+  ],
+  "parse_failures": 0,
+  "request_count": 100,
+  "usage": {
+    "completion_tokens": 7886,
+    "prompt_tokens": 63390,
+    "total_tokens": 71276
+  },
+  "winner_counts": {
+    "dynamic": 1,
+    "inconsistent": 12,
+    "static": 2,
+    "tie": 35
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "label": "dynamic",
+  "config": "stage_artifacts/local_qwen15b/stage5/qwen25_1p5b_dynamic_qlora_downloaded_tiny.placeholder.yaml",
+  "command": [
+    "/home/ubuntu0/Code_place/Github_repoes/SimPO/.venv/bin/python",
+    "/home/ubuntu0/Code_place/Github_repoes/SimPO/scripts/run_simpo.py",
+    "/home/ubuntu0/Code_place/Github_repoes/SimPO/stage_artifacts/local_qwen15b/stage5/qwen25_1p5b_dynamic_qlora_downloaded_tiny.placeholder.yaml"
+  ],
+  "returncode": 0,
+  "start_wall": "2026-05-05 13:32:41 +0800",
+  "end_wall": "2026-05-05 13:32:52 +0800",
+  "duration_s": 10.912,
+  "gpu_sample_count": 10,
+  "peak_memory_used_mib": 11695,
+  "stdout": "stage_artifacts/local_qwen15b/stage7/dynamic_success_candidate/stdout.log",
+  "stderr": "stage_artifacts/local_qwen15b/stage7/dynamic_success_candidate/stderr.log",
+  "gpu_samples": "stage_artifacts/local_qwen15b/stage7/dynamic_success_candidate/gpu_samples.jsonl"
+}

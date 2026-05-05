@@ -1,0 +1,66 @@
+# Placeholder only. Do not execute without separate approval for model loading and GPU training.
+# Uses downloaded local model files and a tiny sampled local preference dataset.
+
+# Model arguments
+model_name_or_path: stage_artifacts/local_qwen15b/models/Qwen2.5-1.5B-Instruct
+torch_dtype: bfloat16
+attn_implementation: eager
+trust_remote_code: false
+use_peft: true
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: true
+bnb_4bit_quant_storage: uint8
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+lora_target_modules:
+- q_proj
+- k_proj
+- v_proj
+- o_proj
+- gate_proj
+- up_proj
+- down_proj
+
+# Data training arguments
+dataset_mixer:
+  stage_artifacts/local_qwen15b/data/trl_ultrafeedback_binarized_tiny: 1.0
+dataset_splits:
+- train
+- test
+preprocessing_num_workers: 1
+auto_insert_empty_system_msg: false
+
+# SimPOTrainer arguments
+bf16: true
+beta: 2.0
+gamma_beta_ratio: 0.25
+dynamic_gamma_enabled: false
+do_eval: true
+evaluation_strategy: steps
+eval_steps: 5
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+learning_rate: 5.0e-6
+log_level: info
+logging_steps: 1
+logging_strategy: steps
+lr_scheduler_type: cosine
+max_length: 512
+max_prompt_length: 384
+max_steps: 5
+optim: paged_adamw_8bit
+output_dir: stage_artifacts/local_qwen15b/outputs/static_qlora_downloaded_tiny
+overwrite_output_dir: true
+run_name: local-qwen25-1p5b-static-qlora-downloaded-tiny
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+push_to_hub: false
+save_strategy: "no"
+report_to: []
+seed: 42
+warmup_ratio: 0.0
+dataset_num_proc: 1

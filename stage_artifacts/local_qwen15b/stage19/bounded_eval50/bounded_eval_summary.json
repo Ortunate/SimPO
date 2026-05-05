@@ -1,0 +1,52 @@
+{
+  "ab_ba_consistency_rate": 0.76,
+  "dynamic_win_rate_all_consistent": 0.0263,
+  "dynamic_win_rate_non_tie": 0.3333,
+  "gates": {
+    "ab_ba_consistency_ge_75": true,
+    "ab_ba_consistency_ge_80": false,
+    "expand_to_100_recommended": false,
+    "generation_complete": true,
+    "http_ok": true,
+    "parse_failure_rate_ok": true
+  },
+  "generation_duration_s": 1105.933,
+  "judge_api_calls": 100,
+  "judge_http_failures": 0,
+  "judge_model": "deepseek-v4-flash",
+  "judge_parse_failures": 0,
+  "judge_usage": {
+    "completion_tokens": 7886,
+    "prompt_tokens": 63390,
+    "total_tokens": 71276
+  },
+  "pair_count": 50,
+  "peak_memory_used_mib": 6402,
+  "prompt_count": 50,
+  "recommendation": "Do not expand to 100 prompts by default. Treat Stage L19 as a bounded fallback evaluation package: pipeline-valid, neutral/tie-heavy result, no dynamic superiority claim.",
+  "response_count": 100,
+  "response_length": {
+    "dynamic_64_16_20step": {
+      "avg_chars": 767.66,
+      "count": 50,
+      "empty_responses": 0,
+      "max_chars": 1559,
+      "min_chars": 2
+    },
+    "static_64_16_20step": {
+      "avg_chars": 753.54,
+      "count": 50,
+      "empty_responses": 0,
+      "max_chars": 1563,
+      "min_chars": 2
+    }
+  },
+  "stage": "L19",
+  "status": "PASS",
+  "winner_counts": {
+    "dynamic": 1,
+    "inconsistent": 12,
+    "static": 2,
+    "tie": 35
+  }
+}

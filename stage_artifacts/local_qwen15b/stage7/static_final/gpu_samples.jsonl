@@ -1,0 +1,8 @@
+{"timestamp": "2026/05/05 13:26:48.128", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 1652, "memory_total_mib": 16376, "utilization_gpu_percent": 13, "monotonic_s": 2024.282311112}
+{"timestamp": "2026/05/05 13:26:49.413", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 1652, "memory_total_mib": 16376, "utilization_gpu_percent": 14, "monotonic_s": 2025.557586359}
+{"timestamp": "2026/05/05 13:26:50.679", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 1652, "memory_total_mib": 16376, "utilization_gpu_percent": 14, "monotonic_s": 2026.821170773}
+{"timestamp": "2026/05/05 13:26:51.784", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 1652, "memory_total_mib": 16376, "utilization_gpu_percent": 12, "monotonic_s": 2027.931863005}
+{"timestamp": "2026/05/05 13:26:52.836", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 1652, "memory_total_mib": 16376, "utilization_gpu_percent": 9, "monotonic_s": 2028.962191972}
+{"timestamp": "2026/05/05 13:26:53.867", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 2505, "memory_total_mib": 16376, "utilization_gpu_percent": 19, "monotonic_s": 2029.996670121}
+{"timestamp": "2026/05/05 13:26:54.900", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 3023, "memory_total_mib": 16376, "utilization_gpu_percent": 28, "monotonic_s": 2031.030548743}
+{"timestamp": "2026/05/05 13:26:55.949", "name": "NVIDIA GeForce RTX 4090 Laptop GPU", "memory_used_mib": 3675, "memory_total_mib": 16376, "utilization_gpu_percent": 5, "monotonic_s": 2032.078375279}

@@ -104,10 +104,10 @@ def apply_chat_template(
 
             example["text_prompt"] = tokenizer.apply_chat_template(prompt_messages, tokenize=False)
             example["text_chosen"] = tokenizer.apply_chat_template(chosen_messages, tokenize=False)
-            if example["text_chosen"].startswith(tokenizer.bos_token):
+            if tokenizer.bos_token is not None and example["text_chosen"].startswith(tokenizer.bos_token):
                 example["text_chosen"] = example["text_chosen"][len(tokenizer.bos_token):]
             example["text_rejected"] = tokenizer.apply_chat_template(rejected_messages, tokenize=False)
-            if example["text_rejected"].startswith(tokenizer.bos_token):
+            if tokenizer.bos_token is not None and example["text_rejected"].startswith(tokenizer.bos_token):
                 example["text_rejected"] = example["text_rejected"][len(tokenizer.bos_token):]
         else:
             raise ValueError(
@@ -199,11 +199,12 @@ def main():
             {"text_prompt": "prompt", "text_chosen": "chosen", "text_rejected": "rejected"}
         )
 
-    # Log a few random samples from the training set:
-    for index in random.sample(range(len(raw_datasets["train"])), 3):
-        logger.info(f"Prompt sample {index} of the raw training set:\n\n{raw_datasets['train'][index]['prompt']}")
-        logger.info(f"Chosen sample {index} of the raw training set:\n\n{raw_datasets['train'][index]['chosen']}")
-        logger.info(f"Rejected sample {index} of the raw training set:\n\n{raw_datasets['train'][index]['rejected']}")
+    if training_args.log_train_samples:
+        # Log a few random samples from the training set:
+        for index in random.sample(range(len(raw_datasets["train"])), 3):
+            logger.info(f"Prompt sample {index} of the raw training set:\n\n{raw_datasets['train'][index]['prompt']}")
+            logger.info(f"Chosen sample {index} of the raw training set:\n\n{raw_datasets['train'][index]['chosen']}")
+            logger.info(f"Rejected sample {index} of the raw training set:\n\n{raw_datasets['train'][index]['rejected']}")
 
     torch_dtype = (
         model_args.torch_dtype if model_args.torch_dtype in ["auto", None] else getattr(torch, model_args.torch_dtype)

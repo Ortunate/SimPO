@@ -1,0 +1,64 @@
+{
+  "stage": "L15",
+  "purpose": "Prepare static/dynamic answer generation configuration without running generation.",
+  "run_generation": false,
+  "base_model": {
+    "name": "Qwen2.5-1.5B-Instruct",
+    "path": "stage_artifacts/local_qwen15b/models/Qwen2.5-1.5B-Instruct",
+    "load_requires_future_approval": true
+  },
+  "adapters": {
+    "static_64_16_20step": {
+      "path": "stage_artifacts/local_qwen15b/outputs/stage10_static_64_16_20step",
+      "source_stage": "L10",
+      "description": "Static QLoRA smoke adapter; not a final model."
+    },
+    "dynamic_64_16_20step": {
+      "path": "stage_artifacts/local_qwen15b/outputs/stage11_dynamic_64_16_20step",
+      "source_stage": "L11",
+      "description": "Dynamic-gamma QLoRA smoke adapter; not a final model."
+    }
+  },
+  "prompt_source": {
+    "current_stage": "synthetic_placeholder_only",
+    "future_allowed_sources": [
+      "small synthetic prompts",
+      "approved local evaluation prompts",
+      "approved downloaded benchmark prompts after separate approval"
+    ],
+    "must_not_use_without_approval": [
+      "new dataset downloads",
+      "full AlpacaEval",
+      "Arena-Hard",
+      "paid or remote prompt sources"
+    ]
+  },
+  "generation_defaults_for_future_stage": {
+    "max_new_tokens": 256,
+    "temperature": 0.0,
+    "do_sample": false,
+    "top_p": 1.0,
+    "batch_size": 1,
+    "max_prompt_count_for_first_smoke": 2
+  },
+  "resource_boundaries": {
+    "expected_vram_needs_future_measurement": true,
+    "expected_over_14gb_requires_approval": true,
+    "near_15gb_requires_stop_or_rollback_plan": true,
+    "no_gpu_action_in_stage_l15": true
+  },
+  "output_contract_for_future_generation": {
+    "jsonl_fields": [
+      "prompt_id",
+      "instruction",
+      "variant",
+      "base_model",
+      "adapter_path",
+      "response",
+      "generation_config",
+      "provenance"
+    ],
+    "pairing_rule": "Join static and dynamic responses by prompt_id to create later judge input pairs."
+  },
+  "interpretation_boundary": "This plan prepares a future generation step only. It is not a generation run and contains no model outputs."
+}

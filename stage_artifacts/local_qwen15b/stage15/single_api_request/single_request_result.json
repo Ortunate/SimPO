@@ -1,0 +1,41 @@
+{
+  "http_error_body": null,
+  "judge_text": "{\n  \"winner\": \"A\",\n  \"score_a\": 8,\n  \"score_b\": 2,\n  \"confidence\": 0.95,\n  \"rationale\": \"Response A provides two concrete, practical pre-launch checks (gitignore and resource monitoring) that help avoid common issues, while response B suggests starting immediately without any checks, which is not practical for a smoke run.\"\n}",
+  "metadata": {
+    "api_calls": 1,
+    "duration_s": 1.676,
+    "endpoint_host": "api.deepseek.com",
+    "max_tokens": 256,
+    "model": "deepseek-v4-flash",
+    "order": "AB",
+    "pair_id": "synthetic-pair-001",
+    "presence": {
+      "deepseek_key_present": true,
+      "endpoint_present": true,
+      "env_file_exists": true,
+      "model_present": true
+    },
+    "request_id": "synthetic-pair-001-ab",
+    "response_model": "deepseek-v4-flash",
+    "status_code": 200,
+    "usage": {
+      "completion_tokens": 83,
+      "prompt_cache_hit_tokens": 0,
+      "prompt_cache_miss_tokens": 214,
+      "prompt_tokens": 214,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 297
+    }
+  },
+  "parse_errors": [],
+  "parsed_judge": {
+    "confidence": 0.95,
+    "rationale": "Response A provides two concrete, practical pre-launch checks (gitignore and resource monitoring) that help avoid common issues, while response B suggests starting immediately without any checks, which is not practical for a smoke run.",
+    "score_a": 8,
+    "score_b": 2,
+    "winner": "A"
+  },
+  "transport_error": null
+}

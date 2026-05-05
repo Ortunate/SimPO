@@ -47,6 +47,8 @@ class SimPOConfig(TrainingArguments):
             The truncation mode to use, either `keep_end` or `keep_start`. This argument is required if you want to use the default data collator.
         generate_during_eval (`bool`, defaults to `False`):
             Whether to sample and log generations during evaluation step.
+        log_train_samples (`bool`, defaults to `True`):
+            Whether to log random formatted training samples before training starts.
         is_encoder_decoder (`Optional[bool]`, `optional`, defaults to `None`):
             If no model is provided, we need to know if the model_init returns an encoder-decoder.
         disable_dropout (`bool`, defaults to `True`):
@@ -78,6 +80,7 @@ class SimPOConfig(TrainingArguments):
     padding_value: int = None
     truncation_mode: str = "keep_end"
     generate_during_eval: bool = False
+    log_train_samples: bool = True
     is_encoder_decoder: Optional[bool] = None
 
     model_init_kwargs: Optional[Dict] = None

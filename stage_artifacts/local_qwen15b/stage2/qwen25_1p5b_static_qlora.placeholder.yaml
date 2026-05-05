@@ -1,0 +1,65 @@
+# Placeholder only. Do not execute until Stage L2/L3 approval gates are satisfied.
+# Purpose: local Qwen2.5-1.5B-Instruct static SimPO QLoRA fallback config sketch.
+
+# Model arguments
+model_name_or_path: <APPROVED_LOCAL_OR_MIRROR_QWEN2_5_1_5B_INSTRUCT_PATH>
+torch_dtype: bfloat16
+attn_implementation: eager
+trust_remote_code: false
+use_peft: true
+load_in_4bit: true
+bnb_4bit_quant_type: nf4
+use_bnb_nested_quant: true
+bnb_4bit_quant_storage: uint8
+lora_r: 16
+lora_alpha: 32
+lora_dropout: 0.05
+# Candidate Qwen-style modules. Verify after approved model/config inspection.
+lora_target_modules:
+- q_proj
+- k_proj
+- v_proj
+- o_proj
+- gate_proj
+- up_proj
+- down_proj
+
+# Data training arguments
+# Must point to an approved tiny local debug dataset first.
+dataset_mixer:
+  <APPROVED_TINY_LOCAL_PREF_DATASET_PATH>: 1.0
+dataset_splits:
+- train
+- test
+preprocessing_num_workers: 1
+
+# SimPOTrainer arguments
+bf16: true
+beta: 2.0
+gamma_beta_ratio: 0.25
+dynamic_gamma_enabled: false
+do_eval: true
+evaluation_strategy: steps
+eval_steps: 5
+gradient_accumulation_steps: 1
+gradient_checkpointing: true
+gradient_checkpointing_kwargs:
+  use_reentrant: false
+learning_rate: 5.0e-6
+log_level: info
+logging_steps: 1
+lr_scheduler_type: cosine
+max_length: 512
+max_prompt_length: 384
+max_steps: 5
+optim: paged_adamw_8bit
+output_dir: stage_artifacts/local_qwen15b/outputs/static_qlora_smoke
+run_name: local-qwen25-1p5b-static-qlora-smoke
+per_device_train_batch_size: 1
+per_device_eval_batch_size: 1
+push_to_hub: false
+save_strategy: "no"
+report_to:
+- none
+seed: 42
+warmup_ratio: 0.0

@@ -1,0 +1,35 @@
+{
+  "actual_response_count": 100,
+  "api_calls": 0,
+  "complete": true,
+  "duration_s": 1105.933,
+  "expected_response_count": 100,
+  "max_new_tokens": 256,
+  "model_path": "stage_artifacts/local_qwen15b/models/Qwen2.5-1.5B-Instruct",
+  "peak_memory_used_mib": 6402,
+  "prompt_count": 50,
+  "prompt_path": "stage_artifacts/local_qwen15b/stage19/bounded_eval50/prompts.jsonl",
+  "response_path": "stage_artifacts/local_qwen15b/stage19/bounded_eval50/generation/responses.jsonl",
+  "stage": "L19",
+  "training_steps": 0,
+  "variants": [
+    {
+      "adapter_path": "stage_artifacts/local_qwen15b/outputs/stage10_static_64_16_20step",
+      "duration_s": 545.336,
+      "memory_after_load_mib": 4962,
+      "peak_memory_used_mib": 6278,
+      "records_generated": 50,
+      "records_skipped": 0,
+      "variant": "static_64_16_20step"
+    },
+    {
+      "adapter_path": "stage_artifacts/local_qwen15b/outputs/stage11_dynamic_64_16_20step",
+      "duration_s": 560.593,
+      "memory_after_load_mib": 5078,
+      "peak_memory_used_mib": 6402,
+      "records_generated": 50,
+      "records_skipped": 0,
+      "variant": "dynamic_64_16_20step"
+    }
+  ]
+}

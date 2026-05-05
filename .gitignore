@@ -121,6 +121,9 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.example
+!.env.template
 .venv
 .venv/
 .uv-python/
@@ -168,6 +171,8 @@ data/
 wandb/
 
 # Local experiment artifacts and generated training outputs
+stage_artifacts/local_qwen15b/models/
+stage_artifacts/local_qwen15b/data/
 stage_artifacts/**/model.safetensors
 stage_artifacts/**/training_args.bin
 stage_artifacts/**/hf-cache/

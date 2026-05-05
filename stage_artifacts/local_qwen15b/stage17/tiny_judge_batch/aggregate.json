@@ -1,0 +1,42 @@
+{
+  "consistent_pairs": 2,
+  "inconsistent_pairs": 0,
+  "pair_count": 2,
+  "pair_summaries": [
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l16-synthetic-gen-001",
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    },
+    {
+      "aggregate_winner": "tie",
+      "consistent": true,
+      "orders": [
+        "AB",
+        "BA"
+      ],
+      "pair_id": "l16-synthetic-gen-002",
+      "winners": [
+        "tie",
+        "tie"
+      ]
+    }
+  ],
+  "request_count": 4,
+  "usage": {
+    "completion_tokens": 366,
+    "prompt_tokens": 1754,
+    "total_tokens": 2120
+  },
+  "winner_counts": {
+    "tie": 2
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "after_generate_mib": 3922,
+    "before_generate_mib": 3850,
+    "prompt_id": "synthetic-gen-001",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 3965,
+    "before_generate_mib": 3922,
+    "prompt_id": "synthetic-gen-002",
+    "variant": "static_64_16_20step"
+  },
+  {
+    "after_generate_mib": 3929,
+    "before_generate_mib": 3873,
+    "prompt_id": "synthetic-gen-001",
+    "variant": "dynamic_64_16_20step"
+  },
+  {
+    "after_generate_mib": 3965,
+    "before_generate_mib": 3929,
+    "prompt_id": "synthetic-gen-002",
+    "variant": "dynamic_64_16_20step"
+  }
+]

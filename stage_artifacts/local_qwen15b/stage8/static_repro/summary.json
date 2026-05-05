@@ -1,0 +1,18 @@
+{
+  "label": "static",
+  "config": "stage_artifacts/local_qwen15b/stage8/qwen25_1p5b_static_qlora_tiny_smoke.yaml",
+  "command": [
+    "/home/ubuntu0/Code_place/Github_repoes/SimPO/.venv/bin/python",
+    "/home/ubuntu0/Code_place/Github_repoes/SimPO/scripts/run_simpo.py",
+    "/home/ubuntu0/Code_place/Github_repoes/SimPO/stage_artifacts/local_qwen15b/stage8/qwen25_1p5b_static_qlora_tiny_smoke.yaml"
+  ],
+  "returncode": 0,
+  "start_wall": "2026-05-05 13:44:38 +0800",
+  "end_wall": "2026-05-05 13:44:52 +0800",
+  "duration_s": 13.774,
+  "gpu_sample_count": 12,
+  "peak_memory_used_mib": 11620,
+  "stdout": "stage_artifacts/local_qwen15b/stage8/static_repro/stdout.log",
+  "stderr": "stage_artifacts/local_qwen15b/stage8/static_repro/stderr.log",
+  "gpu_samples": "stage_artifacts/local_qwen15b/stage8/static_repro/gpu_samples.jsonl"
+}
